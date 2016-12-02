@@ -13,8 +13,14 @@
     tools:context="com.example.a403.timeaplle.MainActivity"
     android:weightSum="1">
 
+    <Chronometer
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer3"
+        android:format="예약된 시간,%s" />
+
     <Button
-        android:text="Button"
+        android:text="예약시작"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button" />
@@ -25,15 +31,40 @@
         android:layout_weight="0.04" >
 
         <RadioButton
-            android:text="RadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton" />
+            android:id="@+id/radioButton"
+            android:text="날짜 설정(캘린더뷰)" />
 
         <RadioButton
-            android:text="RadioButton"
+            android:text="시간설정"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radioButton2" />
+
     </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="300dp">
+
+        <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="316dp"
+            android:id="@+id/timePicker" />
+
+        <CalendarView
+            android:layout_width="wrap_content"
+            android:layout_height="324dp"
+            android:id="@+id/calendarView2" />
+    </FrameLayout>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:id="@+id/textView2"
+        android:layout_weight="0.53"
+        android:layout_height="50dp" />
+
 </>
